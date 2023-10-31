@@ -1,0 +1,10 @@
+M140 S50 ;Start Heat bed to 50
+M190 S50 ;Wait for bed to hit 50
+M140 S60 ; heat bed to 60
+M104 S150 ;heat hot ent to 150
+M109 S150 ;wait for hot end
+G28 O ; Home all untrusted axes
+G29 ; Auto Bed Level
+M420 S1 ;use stored mesh
+G1 Z10.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X0 Y0
